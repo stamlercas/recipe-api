@@ -32,12 +32,6 @@ class UnitsSeeder extends Seeder
         		'abbreviation_plural' => 'L'
         	],
         	[
-        		'name' => 'centiliter',
-        		'abbreviation' => 'cl',
-        		'name_plural' => 'centiliters',
-        		'abbreviation_plural' => 'cl'
-        	],
-        	[
         		'name' => 'cup',
         		'abbreviation' => 'c',
         		'name_plural' => 'cups',
