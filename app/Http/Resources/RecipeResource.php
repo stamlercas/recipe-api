@@ -26,7 +26,7 @@ class RecipeResource extends Resource
             'notes' => $this->notes,
             'created_at' => $this->created_at,
             'source' => new SourceResource($this->source),
-            'ingredients' => new IngredientsResource($this->ingredients),
+            'ingredients' => new RecipeIngredientsResource($this->ingredients),
             'directions' => new DirectionsResource($this->directions)
         ];
     }

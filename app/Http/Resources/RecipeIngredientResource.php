@@ -2,9 +2,10 @@
 
 namespace App\Http\Resources;
 
+use App\Unit;
 use Illuminate\Http\Resources\Json\Resource;
 
-class IngredientResource extends Resource
+class RecipeIngredientResource extends Resource
 {
     /**
      * Transform the resource into an array.
@@ -18,6 +19,10 @@ class IngredientResource extends Resource
             'id' => $this->id,
             'name' => $this->name,
             'description' => $this->description,
+            'preparation' => $this->pivot->preparation,
+            'quantity' => $this->pivot->quantity,
+            'display_quantity' => $this->pivot->display_quantity,
+            'unit' => new UnitResource(Unit::find($this->pivot->unit_id))
         ];
     }
 }

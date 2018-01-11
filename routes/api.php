@@ -19,6 +19,8 @@ Route::group(['middleware' => ['api']], function () {
         Route::get('user', 'ApiController@getAuthUser');
 
         Route::resource('recipes', 'RecipeController');
+
+        Route::resource('ingredients', 'IngredientController');
     });
 });
 
