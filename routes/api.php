@@ -21,6 +21,8 @@ Route::group(['middleware' => ['api']], function () {
         Route::resource('recipes', 'RecipeController');
 
         Route::resource('ingredients', 'IngredientController');
+
+        Route::resource('sources', 'SourceController');
     });
 });
 
