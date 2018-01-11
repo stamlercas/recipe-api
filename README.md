@@ -1,9 +1,9 @@
 # RecipeAPI
 
-### What the heck is a BrewCenter API?
+### What is this?
 This API is an open source API for sharing recipes and recipe related data.  With this API, you will be able to view recipes, ingredients, directions, nutrients, units, and their conversions.
 
-### How?
+### What are we using?
 The Recipe API is a REST API built using the Laravel framework. All data is stored in a database, and made available via RESTful endpoints which return JSON data.
 
 ### Getting Started
