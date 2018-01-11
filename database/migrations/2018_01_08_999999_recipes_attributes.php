@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class RecipesNutrients extends Migration
+class RecipesAttributes extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class RecipesNutrients extends Migration
      */
     public function up()
     {
-        Schema::create('recipes_nutrients', function (Blueprint $table) {
+        Schema::create('recipes_attributes', function (Blueprint $table) {
             $table->string('recipe_id');
-            $table->integer('nutrient_id');
-            $table->decimal('value', 18, 4);
+            $table->integer('attribute_id')->unsigned();
 
-            $table->primary(['recipe_id', 'nutrient_id']);
+            $table->primary(['recipe_id', 'attribute_id']);
             $table->foreign('recipe_id')->references('id')->on('recipes');
-            $table->foreign('nutrient_id')->references('id')->on('nutrients');
+            $table->foreign('attribute_id')->references('id')->on('attributes');
         });
     }
 
@@ -31,6 +30,6 @@ class RecipesNutrients extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('recipes_nutrients');
+        Schema::dropIfExists('recipes_attributes');
     }
 }

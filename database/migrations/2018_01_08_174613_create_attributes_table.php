@@ -19,9 +19,9 @@ class CreateAttributesTable extends Migration
             $table->string('description')->nullable();
             $table->string('type');                     // can only be allergies, courses, cuisines, diets, and holidays
             $table->timestamps();
-            $table->integer('user_id');
+            $table->integer('user_id')->unsigned();
 
-            $table->primary('id');
+            //$table->primary('id');    Multiple primary key defined
             $table->foreign('user_id')->references('id')->on('users');
         });
     }

@@ -15,12 +15,12 @@ class CreateIngredientsTable extends Migration
     {
         Schema::create('ingredients', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
+            $table->integer('user_id')->unsigned();
             $table->string('name');
             $table->string('description')->nullable();
             $table->timestamps();
 
-            $table->primary('id');
+            //$table->primary('id');    Multiple primary key defined
             $table->foreign('user_id')->references('id')->on('users');
         });
     }

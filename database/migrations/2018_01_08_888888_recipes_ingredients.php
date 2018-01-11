@@ -15,8 +15,9 @@ class RecipesIngredients extends Migration
     {
         Schema::create('recipes_ingredients', function (Blueprint $table) {
             $table->string('recipe_id');
-            $table->integer('ingredient_id');
-            $table->integer('unit_id')->nullable();
+            $table->integer('ingredient_id')->unsigned();
+            $table->string('unit_id')->nullable();
+            $table->string('preperation')->nullable();
             $table->decimal('quantity', 10, 4);
             $table->string('display_quantity');
 

@@ -21,11 +21,11 @@ class CreateRecipesTable extends Migration
             $table->integer('prep_time')->nullable();
             $table->integer('cook_time')->nullable();
             $table->string('image_url')->nullable();
-            $table->integer('source_id');       // fk on sources
+            $table->integer('source_id')->unsigned();       // fk on sources
             $table->string('source_url');
             $table->text('notes')->nullable();
             $table->timestamps();
-            $table->integer('user_id');         // foreign key to users
+            $table->integer('user_id')->unsigned();         // foreign key to users
 
             $table->primary('id');
             $table->foreign('source_id')->references('id')->on('sources');

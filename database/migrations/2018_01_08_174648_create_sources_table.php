@@ -18,10 +18,10 @@ class CreateSourcesTable extends Migration
             $table->string('name');
             $table->string('site_url');
             $table->string('image_url');
-            $table->integer('user_id');
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
 
-            $table->primary('id');
+            //$table->primary('id');    Multiple primary key defined
             $table->foreign('user_id')->references('id')->on('users');
         });
     }

@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Recipe extends Model
 {
+    public $incrementing = false;
+    
 	public function attributes() {
         return $this->belongsToMany('App\Attribute', 'recipes_attributes');
     }

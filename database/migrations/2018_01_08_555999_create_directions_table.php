@@ -19,7 +19,7 @@ class CreateDirectionsTable extends Migration
             $table->integer('step');
             $table->text('text');
 
-            $table->primary('id');
+            //$table->primary('id');    Multiple primary key defined
             $table->foreign('recipe_id')->references('id')->on('recipes');
         });
     }

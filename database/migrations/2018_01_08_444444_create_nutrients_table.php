@@ -16,11 +16,11 @@ class CreateNutrientsTable extends Migration
         Schema::create('nutrients', function (Blueprint $table) {
             $table->increments('id');
             $table->string('description');
-            $table->integer('unit_id');
-            $table->integer('user_id');
+            $table->string('unit_id');
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
 
-            $table->primary('id');
+            //$table->primary('id');    Multiple primary key defined
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('unit_id')->references('id')->on('units');
         });
