@@ -149,7 +149,7 @@ class DatabaseSeeder extends Seeder
 	        		'unit_id' => 'tbsp',
 	        		'quantity' => 2,
 	        		'display_quantity' => '2',
-	        		'preperation' => 'freshly minced'
+	        		'preparation' => 'freshly minced'
 	        	],
 	        	2 => [
 	        		'unit_id' => 'tbsp',

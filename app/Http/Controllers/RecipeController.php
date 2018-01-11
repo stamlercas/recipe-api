@@ -16,7 +16,7 @@ class RecipeController extends Controller
      */
     public function index()
     {
-        
+        return new RecipesResource(Recipe::paginate());
     }
 
     /**
