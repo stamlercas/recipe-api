@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Recipe;
+use App\Http\Resources\RecipeResource;
+use App\Http\Resources\RecipesResource;
 use Illuminate\Http\Request;
 
 class RecipeController extends Controller
@@ -14,7 +16,7 @@ class RecipeController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**

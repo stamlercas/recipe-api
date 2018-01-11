@@ -19,7 +19,6 @@ class CreateUnitsTable extends Migration
             $table->string('abbreviation');
             $table->string('name_plural');
             $table->string('abbreviation_plural');
-            $table->timestamps();
 
             $table->primary('id');
         });

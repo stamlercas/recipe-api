@@ -17,7 +17,7 @@ class RecipesIngredients extends Migration
             $table->string('recipe_id');
             $table->integer('ingredient_id')->unsigned();
             $table->string('unit_id')->nullable();
-            $table->string('preperation')->nullable();
+            $table->string('preparation')->nullable();
             $table->decimal('quantity', 10, 4);
             $table->string('display_quantity');
 

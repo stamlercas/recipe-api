@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Recipe extends Model
 {
     public $incrementing = false;
-    
+
 	public function attributes() {
         return $this->belongsToMany('App\Attribute', 'recipes_attributes');
     }
@@ -17,7 +17,7 @@ class Recipe extends Model
     }
 
 	public function ingredients() {
-        return $this->belongsToMany('App\Ingredient', 'recipes_ingredients');
+        return $this->belongsToMany('App\Ingredient', 'recipes_ingredients')->withPivot('unit_id', 'preparation', 'quantity', 'display_quantity');
     }
 
     public function nutrients() {

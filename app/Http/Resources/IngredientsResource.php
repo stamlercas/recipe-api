@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
-class RecipesResource extends ResourceCollection
+class IngredientsResource extends ResourceCollection
 {
     /**
      * Transform the resource collection into an array.
@@ -14,6 +14,6 @@ class RecipesResource extends ResourceCollection
      */
     public function toArray($request)
     {
-        return RecipeResource::collection($this->collection);
+        return IngredientResource::collection($this->collection);
     }
 }
